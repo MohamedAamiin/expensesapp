@@ -12,7 +12,6 @@ margin:30px  0 10px;
 const HomeComponent = (props) =>{
 return (
     <Container>
-HomeComponent
 <OverviewComponent/>
 <TrascationComp/>
     </Container>

@@ -32,12 +32,37 @@ display:flex;
 flex-direction:column;
 border:1px solid #e6e8e9;
 gap:10px;
+padding: 15px 20px;
+margin: 10px 20px;
+& input{
+outline:none;
+padding: 10px 20px;
+border-radius:4px;
+border:1px solid #e6e8e9;
+}
+`;
+const RadioBox = styled.div`
+display:flex;
+flex-direction:row;
+width:100%;
+align-items:center;
+margin:0px 10px;
 `;
 const AddTranView = () =>{
+
 return (
     <AddTranContainer>
         <input placeholder="Amount"/>
         <input placeholder="Description"/>
+        <RadioBox>
+<input type="radio" id="expenses" name="type" value="EXPENSES"/>
+<label htmlFor="expenses">Expenses</label>
+<input type="radio" id="income" name="type" value="INCOME"/>
+<label htmlFor="income">income</label>
+        </RadioBox>
+        <AddTranView>
+            ADD Transaction
+        </AddTranView>
     </AddTranContainer>
 )
 }
